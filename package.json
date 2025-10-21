@@ -1,0 +1,15 @@
+{
+  "name": "uofg.webr.ing",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tailwindcss -i src/styles.css -o public/styles.css -m"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.15",
+    "tailwindcss": "^4.1.15"
+  },
+  "trustedDependencies": [
+    "@parcel/watcher"
+  ]
+}

@@ -1,7 +1,9 @@
 base_url = "https://uofg.newty.dev"
 ring_name = "University of Glasgow"
-ring_description = "A webring for students and alumni of the University of Glasgow!"
+ring_description = "🎓 webring for students/alumni of UofG!"
 ring_owner = "newt"
 ring_owner_site = "https://newty.dev"
 
 filepath_list = ["websites.json"]
+path_templates = "templates"
+path_assets = "public"

@@ -1,8 +1,9 @@
-clean:
+@clean:
     rm -rf webring
 
-build:
+@build:
+    bun run build
     ringfairy
 
-serve:
+@serve: build
     miniserve webring
