@@ -1,0 +1,52 @@
+name: Deploy Webring
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install ringfairy
+        run: |
+          curl -L https://github.com/k3rs3d/ringfairy/releases/download/v0.2.1-alpha/ringfairy-linux.tar.gz -o ringfairy.tar.gz
+          tar -xzf ringfairy.tar.gz
+          chmod +x ringfairy
+          sudo mv ringfairy /usr/local/bin/
+  
+      - name: Build webring
+        run: ringfairy
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./webring
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
