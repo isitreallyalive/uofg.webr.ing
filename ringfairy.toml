@@ -5,5 +5,5 @@ ring_owner = "newt"
 ring_owner_site = "https://newty.dev"
 
 filepath_list = ["websites.json"]
-path_templates = "templates"
-path_assets = "public"
+path_templates = "dist/templates"
+path_assets = "dist/assets"

@@ -2,8 +2,8 @@
     rm -rf webring
 
 @build:
-    bun run build
+    bun --silent run build
     ringfairy
 
 @serve: build
-    miniserve webring
+    miniserve webring --index index.html

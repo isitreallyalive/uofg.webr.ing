@@ -1,3 +1,4 @@
 webring
 node_modules
-public/styles.css
+.astro
+dist
