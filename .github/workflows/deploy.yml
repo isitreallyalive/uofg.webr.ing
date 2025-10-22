@@ -28,9 +28,6 @@ jobs:
       - name: Install dependencies
         run: bun install
 
-      - name: Build templates
-        run: bun run build
-
       - name: Install ringfairy
         run: |
           curl -L https://github.com/k3rs3d/ringfairy/releases/download/v0.2.1-alpha/ringfairy-linux.tar.gz -o ringfairy.tar.gz
@@ -39,7 +36,7 @@ jobs:
           sudo mv ringfairy /usr/local/bin/
   
       - name: Build webring
-        run: ringfairy
+        run: bun run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
