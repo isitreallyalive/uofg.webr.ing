@@ -10,6 +10,7 @@ function ringfairy(): AstroIntegration {
     name: "ringfairy",
     hooks: {
       "astro:build:done": async ({ logger, dir: { pathname: dist } }) => {
+        await fs.mkdir(path.resolve(dist, "assets"), { recursive: true });
         const templates = path.resolve(dist, "templates");
 
         // move necessary html files to templates directory

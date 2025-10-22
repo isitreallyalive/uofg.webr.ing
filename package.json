@@ -3,9 +3,8 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
+    "dev": "bun run dev.ts",
+    "build": "astro build && ringfairy",
     "astro": "astro"
   },
   "dependencies": {

@@ -2,6 +2,5 @@
 
 @layer base {
     body {
-        @apply bg-red-500;
     }
 }
