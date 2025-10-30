@@ -1,16 +1,37 @@
 ---
-import "./styles/global.css";
+import tag from "$lib/tag";
+import "$styles/global.css";
+import { Icon } from "astro-icon/components";
+
+const owner = tag("ring_owner");
+const ownerSite = tag("ring_owner_site");
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>uofg.webr.ing</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <title>uofg.webr.ing</title>
+  </head>
+  <body>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <p>
+        made with <Icon name="mdi:heart" class="inline align-middle" /> by
+        <a href={ownerSite}>{owner}</a>
+      </p>
+      <p>not affiliated with or endorsed by the University of Glasgow.</p>
+    </footer>
+  </body>
 </html>
+
+<style>
+  @reference "$styles/global.css";
+
+  p {
+    @apply text-muted text-center;
+  }
+</style>

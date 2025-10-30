@@ -1,6 +1,81 @@
 @import "tailwindcss";
+@import "@catppuccin/tailwindcss/mocha";
+@import "@fontsource-variable/outfit";
+@import "@fontsource-variable/cascadia-code";
+
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-foreground: var(--catppuccin-color-text);
+  --color-background: var(--catppuccin-color-mantle);
+  --color-hero: var(--catppuccin-color-base);
+  --color-accent: var(--catppuccin-color-lavender);
+  --color-muted: var(--catppuccin-color-subtext0);
+
+  --font-sans: "Outfit", sans-serif;
+  --font-mono: "Cascadia Code", monospace;
+}
 
 @layer base {
-    body {
-    }
+  body {
+    @apply bg-background prose-img:my-0! text-foreground prose prose-ctp prose-headings:font-mono min-h-screen min-w-screen flex flex-col;
+  }
+
+  main {
+    @apply flex-1;
+  }
+
+  footer {
+    @apply prose-p:my-1 py-4;
+  }
+
+  a {
+    @apply no-underline hover:text-accent;
+  }
+}
+
+@utility prose-ctp {
+  /* text */
+  --tw-prose-body: var(--catppuccin-color-text);
+  --tw-prose-headings: var(--catppuccin-color-text);
+  --tw-prose-lead: var(--catppuccin-color-subtext0);
+  --tw-prose-links: var(--catppuccin-color-text);
+  --tw-prose-bold: var(--catppuccin-color-text);
+
+  /* lists / counters */
+  --tw-prose-counters: var(--catppuccin-color-overlay0);
+  --tw-prose-bullets: var(--catppuccin-color-overlay0);
+
+  /* rules / borders */
+  --tw-prose-hr: var(--catppuccin-color-surface2);
+  --tw-prose-th-borders: var(--catppuccin-color-surface2);
+  --tw-prose-td-borders: var(--catppuccin-color-surface1);
+
+  /* quotes */
+  --tw-prose-quotes: var(--catppuccin-color-text);
+  --tw-prose-quote-borders: var(--catppuccin-color-surface2);
+
+  /* captions / misc */
+  --tw-prose-captions: var(--catppuccin-color-subtext0);
+
+  /* code / pre */
+  --tw-prose-code: var(--catppuccin-color-mauve);
+  --tw-prose-pre-code: var(--catppuccin-color-base);
+  --tw-prose-pre-bg: var(--catppuccin-color-surface0);
+
+  /* inverted (prose-invert) — adapt to theme variables */
+  --tw-prose-invert-body: var(--catppuccin-color-base);
+  --tw-prose-invert-headings: var(--catppuccin-color-base);
+  --tw-prose-invert-lead: var(--catppuccin-color-subtext0);
+  --tw-prose-invert-links: var(--catppuccin-color-text);
+  --tw-prose-invert-bold: var(--catppuccin-color-base);
+  --tw-prose-invert-counters: var(--catppuccin-color-overlay0);
+  --tw-prose-invert-bullets: var(--catppuccin-color-overlay0);
+  --tw-prose-invert-hr: var(--catppuccin-color-surface2);
+  --tw-prose-invert-quotes: var(--catppuccin-color-base);
+  --tw-prose-invert-quote-borders: var(--catppuccin-color-surface2);
+  --tw-prose-invert-captions: var(--catppuccin-color-subtext0);
+  --tw-prose-invert-code: var(--catppuccin-color-base);
+  --tw-prose-invert-pre-code: var(--catppuccin-color-subtext0);
+  --tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);
 }

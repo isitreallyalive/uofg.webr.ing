@@ -1,7 +1,22 @@
 ---
-import Page from "../Page.astro";
+import Page from "$page";
+import get from "$lib/tag";
+import { Image } from "astro:assets";
+import uofg from "$img/uofg.webp";
+
+const description = get("ring_description");
 ---
 
 <Page>
-    <h1 class="font-bold">woag</h1>
+  <div class="bg-hero py-8 min-w-full text-center prose-lg">
+    <h1>
+      <Image
+        src={uofg}
+        alt="University of Glasgow"
+        class="inline w-auto h-[1.5em] align-middle"
+      />
+      University of Glasgow
+    </h1>
+    <p>{description}</p>
+  </div>
 </Page>
