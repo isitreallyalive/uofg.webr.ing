@@ -1,7 +1,7 @@
 @clean:
     rm -rf webring
 
-@build:
+@build: clean
     bun --silent run build
 
 @serve: build

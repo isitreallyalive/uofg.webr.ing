@@ -1,7 +1,8 @@
 [
-    {
-        "name": "newt",
-        "slug": "newt",
-        "url": "https://newty.dev/"
-    }
+  {
+    "name": "newt",
+    "slug": "newt",
+    "url": "https://newty.dev/",
+    "rss": "hgttps://newty.dev/rss.xml"
+  }
 ]

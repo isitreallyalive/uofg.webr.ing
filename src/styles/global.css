@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "@catppuccin/tailwindcss/mocha";
 @import "@fontsource-variable/outfit";
-@import "@fontsource-variable/cascadia-code";
+@import "@fontsource/maple-mono/400.css"; /* regular */
 
 @plugin "@tailwindcss/typography";
 
@@ -13,7 +13,7 @@
   --color-muted: var(--catppuccin-color-subtext0);
 
   --font-sans: "Outfit", sans-serif;
-  --font-mono: "Cascadia Code", monospace;
+  --font-mono: "Maple Mono", monospace;
 }
 
 @layer base {

@@ -2,6 +2,10 @@
 import Page from "$page";
 ---
 
+<head>
+  <meta http-equiv="refresh" content="0; url={{ url }}">
+</head>
+
 <Page>
-    
+  <p class="text-center text-lg font-medium">You are headed to <a href={"{{ url }}"}>{"{{ url }}"}</a>!</p>
 </Page>
