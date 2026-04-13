@@ -1,4 +1,4 @@
-![uofg.webr.ing](banner.webp)
+![uofg.webr.ing](assets/banner.webp)
 
 # uofg.webr.ing
 

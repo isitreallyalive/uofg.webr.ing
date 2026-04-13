@@ -17,6 +17,7 @@ concurrency:
 
 jobs:
   build:
+    name: Build webring
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -41,6 +42,7 @@ jobs:
           path: ./dist
 
   deploy:
+    name: Deploy webring
     runs-on: ubuntu-latest
     needs: build
     environment:

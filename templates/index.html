@@ -4,6 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
 
+    <!-- ogp -->
+    <meta property="og:title" content="{{ ring_name }}" />
+    <meta property="og:description" content="{{ ring_description }}" />
+    <meta property="og:image" content="{{base_url}}/banner.webp" />
+    <meta property="og:url" content="{{ base_url }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="uofg.webr.ing" />
+
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/main.css" />
 
@@ -65,7 +73,13 @@
             href="https://github.com/k3rs3d/ringfairy/tree/004322e509588f31888acc66f2bd91ecb009f57a"
             class="secondary"
             >ringfairy@004322e</a
-          >.
+          >. find us on
+          <a
+            href="https://github.com/isitreallyalive/uofg.webr.ing"
+            class="secondary"
+            >github</a
+          >. <br />
+          <small>last updated at {{ current_time }}</small>
         </small>
       </div>
     </footer>
