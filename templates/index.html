@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/main.css" />
+
+    <title>uofg.webr.ing</title>
+  </head>
+  <body>
+    <article>
+      <hgroup class="container">
+        <h1 class="select-none">
+          {{ ring_name }}
+          <img
+            src="/uofg.webp"
+            alt="Coat of arms of the university"
+            class="coat-of-arms"
+          />
+        </h1>
+        <p>{{ ring_description }}</p>
+      </hgroup>
+    </article>
+
+    <main class="container grid">
+      {% for site in sites %}
+      <div>
+        {{ site.website.name | default(value=site.website.slug) }}
+        <!-- rss -->
+        {% if site.website.rss %}
+        <a href="{{ site.website.rss }}" target="_blank"
+          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z"
+            /></svg
+        ></a>
+        {% endif %}
+        <!-- url -->
+        <a href="{{ site.website.url }}" target="_blank"
+          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+            /></svg
+        ></a>
+      </div>
+      {% endfor %}
+    </main>
+
+    <footer>
+      <div class="container">
+        <small>
+          made with
+          <!-- heart -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"
+            />
+          </svg>
+          by
+          <a href="{{ ring_owner_site }}" class="secondary">{{ ring_owner }}</a
+          >. powered by
+          <a
+            href="https://github.com/k3rs3d/ringfairy/tree/004322e509588f31888acc66f2bd91ecb009f57a"
+            class="secondary"
+            >ringfairy@004322e</a
+          >.
+        </small>
+      </div>
+    </footer>
+  </body>
+</html>

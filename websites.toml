@@ -1,0 +1,14 @@
+# example entry
+# (only slug and url are required)
+#
+# [[websites]]
+# name = "Your Name"
+# slug = "your-slug"
+# url = "https://your-website.com/"
+# rss = "https://your-website.com/rss.xml"
+
+[[websites]]
+slug = "newt"
+url = "https://newty.dev/"
+rss = "https://newty.dev/rss.xml"
+

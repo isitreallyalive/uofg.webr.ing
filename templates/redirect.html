@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- <meta http-equiv="refresh" content="0; url={{ url }}" /> -->
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/main.css" />
+
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    <article>
+      <hgroup class="container">
+        <h1 class="select-none">
+          {{ ring_name }}
+          <img
+            src="/uofg.webp"
+            alt="Coat of arms of the university"
+            class="coat-of-arms"
+          />
+        </h1>
+        <p>{{ ring_description }}</p>
+      </hgroup>
+    </article>
+
+    <main class="container">
+      <p>
+        A fairy is teleporting you to
+        <a href="{{ url }}" class="secondary">{{ url }}</a>...!
+      </p>
+    </main>
+
+    <footer>
+      <div class="container">
+        <small>
+          made with
+          <!-- heart -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"
+            />
+          </svg>
+          by
+          <a href="{{ ring_owner_site }}" class="secondary">{{ ring_owner }}</a
+          >. powered by
+          <a
+            href="https://github.com/k3rs3d/ringfairy/tree/004322e509588f31888acc66f2bd91ecb009f57a"
+            class="secondary"
+            >ringfairy@004322e</a
+          >.
+        </small>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,9 +1,11 @@
-base_url = "https://uofg.newty.dev"
+base_url = "https://uofg.webr.ing"
+
+# ring information
 ring_name = "University of Glasgow"
 ring_description = "🎓 webring for students/alumni of UofG!"
 ring_owner = "newt"
 ring_owner_site = "https://newty.dev"
 
-filepath_list = ["websites.json"]
-path_templates = "dist/templates"
-path_assets = "dist/assets"
+# paths
+path_assets = "assets"
+path_templates = "templates"

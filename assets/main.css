@@ -1,0 +1,52 @@
+@import url("https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css");
+
+/* maple mono */
+@font-face {
+  font-family: "Maple Mono";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    url(https://cdn.jsdelivr.net/fontsource/fonts/maple-mono@latest/latin-400-normal.woff2)
+      format("woff2"),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/maple-mono@latest/latin-400-normal.woff)
+      format("woff");
+}
+
+:root {
+  --pico-font-family: "Maple Mono", monospace;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+main {
+  flex: 1;
+}
+
+svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+a:has(svg) {
+  --pico-color: inherit;
+  text-decoration: none;
+  margin-right: 0.25em;
+}
+
+.coat-of-arms {
+  height: 1.75em;
+  vertical-align: middle;
+}
