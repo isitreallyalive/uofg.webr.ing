@@ -3,12 +3,11 @@
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"],
   "compilerOptions": {
-    "baseUrl": "src",
     "paths": {
-      "$lib/*": ["lib/*"],
-      "$styles/*": ["styles/*"],
-      "$img/*": ["img/*"],
-      "$page": ["Page.astro"]
+      "$lib/*": ["./src/lib/*"],
+      "$styles/*": ["./src/styles/*"],
+      "$img/*": ["./src/img/*"],
+      "$page": ["./src/Page.astro"]
     }
   }
 }

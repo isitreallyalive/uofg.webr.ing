@@ -1,4 +1,4 @@
-name: Deploy Webring
+name: Deploy webring
 
 on:
   push:
@@ -34,7 +34,7 @@ jobs:
           tar -xzf ringfairy.tar.gz
           chmod +x ringfairy
           sudo mv ringfairy /usr/local/bin/
-  
+
       - name: Build webring
         run: bun run build
 

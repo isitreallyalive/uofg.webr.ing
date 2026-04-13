@@ -26,6 +26,7 @@ watch("./src", { recursive: true }, async (_event, _filename) => {
 });
 
 await run("bun run build", false).exited;
+
 // https://crates.io/crates/live-server
 const server = run("live-server webring --port 3030 --hard");
 await server.exited;

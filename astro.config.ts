@@ -27,17 +27,18 @@ function ringfairy(): AstroIntegration {
 
           if (file.endsWith(".html")) {
             let newPath: string;
+
             // special pages are in subdirectories
             const dir = path.dirname(file);
             if (dir === ".") newPath = path.resolve(templates, file);
             else newPath = path.resolve(templates, `${dir}.html`);
             await move(oldPath, newPath);
 
-            // change the assets path in the moved html files
-            let contents = await fs.readFile(newPath, "utf-8");
-            contents = contents.replace(/href="\/assets\//g, 'href="/');
-            contents = contents.replace(/src="\/assets\//g, 'src="/');
-            await fs.writeFile(newPath, contents, "utf-8");
+            // // change the assets path in the moved html files
+            // let contents = await fs.readFile(newPath, "utf-8");
+            // contents = contents.replace(/href="\/assets\//g, 'href="/');
+            // contents = contents.replace(/src="\/assets\//g, 'src="/');
+            // await fs.writeFile(newPath, contents, "utf-8");
           } else if (!file.startsWith("assets/")) {
             const newPath = path.resolve(assets, file);
             await move(oldPath, newPath);

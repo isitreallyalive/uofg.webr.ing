@@ -1,0 +1,6 @@
+[tools]
+bun = "latest"
+"cargo:just" = "latest"
+"cargo:live-server" = "latest"
+"cargo:miniserve" = "latest"
+"cargo:ringfairy" = "latest"

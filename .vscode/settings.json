@@ -1,11 +1,11 @@
 {
-    "files.exclude": {
-        ".astro": true,
-        "dist": true,
-        "node_modules": true,
-    },
-    "files.associations": {
-        "*.css": "tailwindcss"
-    },
-    "editor.formatOnSave": true
+  "files.exclude": {
+    ".astro": true,
+    "dist": true,
+    "node_modules": true
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.formatOnSave": true
 }
